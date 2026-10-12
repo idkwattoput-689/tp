@@ -2,6 +2,7 @@ package seedu.address.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_DATE;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_PLAN;
 
 import java.util.ArrayList;
@@ -29,9 +30,9 @@ public class EditPlanCommand extends Command {
 
     public static final String MESSAGE_USAGE = COMMAND_WORD
             + ": Edits a workout plan from the Student currently being viewed.\n"
-            + "Parameters: PLAN_ID [PLAN_NAME] [" + PREFIX_PLAN + " DESCRIPTION] ["
+            + "Parameters: PLAN_ID [" + PREFIX_NAME + " PLAN_NAME] [" + PREFIX_PLAN + " DESCRIPTION] ["
             + PREFIX_DATE + " DATE(DDMMYYYY)]\n"
-            + "Example: " + COMMAND_WORD + " 1 NewName " + PREFIX_PLAN + " New description "
+            + "Example: " + COMMAND_WORD + " 1 " + PREFIX_NAME + " NewName " + PREFIX_PLAN + " New description "
             + PREFIX_DATE + " 15102026";
 
     public static final String MESSAGE_SUCCESS = "Edited workout: %1$s";
